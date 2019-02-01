@@ -22,9 +22,9 @@ module.exports.paginateResults = ({
     ? cursorIndex === results.length - 1 // don't let us overflow
       ? []
       : results.slice(
-          cursorIndex + 1,
-          Math.min(results.length, cursorIndex + 1 + pageSize),
-        )
+        cursorIndex + 1,
+        Math.min(results.length, cursorIndex + 1 + pageSize),
+      )
     : results.slice(0, pageSize);
 
   results.slice(cursorIndex >= 0 ? cursorIndex + 1 : 0, cursorIndex >= 0);
